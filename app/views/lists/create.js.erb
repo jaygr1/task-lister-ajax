@@ -1,1 +1,2 @@
-$('ul').prepend(" <%= j render partial: 'lists', locals: {lists: @lists)%>");
+$('#list').removeClass('hidden')
+$('ul').append(" <%= j render partial: 'list', locals: {list: @list} %>");

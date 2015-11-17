@@ -1,14 +1,15 @@
 class ListsController < ApplicationController 
   
   def index
+    @list = List.new
     @lists = List.all
   end
 
   def create
-    List.create(list_params)
+    @list = List.create(list_params)
     respond_to do |format|
-      format.html {redirect_to root_path}
-      format.js {}
+      format.html
+      format.js
     end
   end
 

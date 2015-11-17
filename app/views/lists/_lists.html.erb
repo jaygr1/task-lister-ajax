@@ -1,7 +1,8 @@
 
-<li>
-  <div class="view">
-    <label><%= list.title %></label>
-    <label><%= link_to "delete", list_path(list), method: 'delete' %></label>
-  </div>
-</li>
+  
+<% @lists.each do |list| %>
+    <li>
+       <%= render partial: 'list', locals: {list: list} %>
+    </li>
+ <% end %>
+
