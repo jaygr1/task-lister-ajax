@@ -1,0 +1,15 @@
+<%= form_for List.new, remote: true do |f| %>
+<div class="form-group">
+      <%= f.label "list name" %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="form-group">
+    <%= f.submit %>
+    </div>
+  <% end %>
+  <% @lists.each do |list| %>
+        <%= render partial: 'lists/lists', locals: {list: list} %>
+      <% end %>
+
+ 
